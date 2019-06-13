@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <com.example.custom.views.CustomView
+        android:id="@+id/valueBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:barHeight="15dp"
+        custom:baseColor="@color/colorProgress"
+        custom:circleRadius="12dp"
+        custom:spaceAfterBar="2dp"
+        custom:circleTextColor="#fff"
+        custom:circleTextSize="14dp"
+        custom:fillColor="@color/colorAccent"
+
+        custom:labelText="Score"
+        custom:labelTextColor="@color/navy"
+        custom:labelTextSize="18dp"
+
+        custom:maxValueTextColor="@color/navy"
+        custom:maxValueTextSize="24dp"
+
+        app:maxValue="250"
+        />
+    <Button
+        android:layout_below="@+id/valueBar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+
+        android:id="@+id/minus"
+        android:background="@drawable/valueselect_minus_state"/>
+    <Button
+        android:layout_below="@+id/valueBar"
+        android:layout_toRightOf="@+id/minus"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/valueselect_plus_state"
+        android:id="@+id/plus"/>
+
+
+</RelativeLayout>
